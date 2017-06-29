@@ -159,7 +159,7 @@ public:
             const size_t end_position = _fs.tellg();
             _fs.seekg(current_position, std::ios_base::beg);
 
-            ARM_COMPUTE_ERROR_ON_MSG((end_position - current_position) < image.info()->tensor_shape().total_size() * image.info()->element_size(),
+            ARM_COMPUTE_ERROR_ON_MSG((end_position - current_position) < image.info()->tensor_shape().total_size(),
                                      "Not enough data in file");
             ARM_COMPUTE_UNUSED(end_position);
 
